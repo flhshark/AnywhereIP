@@ -10,7 +10,7 @@ import Foundation
 struct TickClock: Sendable {
     static let interval: Duration = .milliseconds(200)
 
-    private let origin = mach_continuous_time()
+    private let origin: UInt64 = 0
     private let timebase: mach_timebase_info_data_t
     private let unitsPerTick: UInt64
 
